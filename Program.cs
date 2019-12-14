@@ -8,8 +8,19 @@ namespace KuhnPoker
 {
     class Program
     {
+        static void Print(string toPrint)
+        {
+            Console.WriteLine(toPrint);
+        }
+
+        static void Delay()
+        {
+            Console.WriteLine("Press Enter to continue");
+            Console.ReadLine();
+        }
         static void Main(string[] args)
-        { 
+        {
+            
         }
     }
 }
