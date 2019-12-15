@@ -20,7 +20,11 @@ namespace KuhnPoker
         }
         static void Main(string[] args)
         {
-            
+            KuhnNode node = new KuhnNode(null);
+            Print(node.ToString());
+            Print(node.GetChild(0).GetChild(0).GetChild(1).ToString());
+
+            Delay();
         }
     }
 }
