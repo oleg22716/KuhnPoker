@@ -22,6 +22,10 @@ namespace KuhnPoker
             return -1;
 
         }
+        //private void PrintWithPayouts(Node root) { 
+        //foreach
+        
+        //}
         private int Payout1(Node node)//from player 1's perspective
         {
             if (!IsTerminal(node)) {
@@ -32,12 +36,12 @@ namespace KuhnPoker
             int secondCard=CardToNumber(state[1]);//todo assert/validation
             int firstPot=1;//ante
             int secondPot=1;//ante
-            if (state[4] == 'B') { secondPot += 1; }
+            if (state[3] == 'B') { secondPot += 1; }
             if (state.Length == 5)
             {
-                if (state[5] == 'B') firstPot += 1;
+                if (state[4] == 'B') firstPot += 1;
             }
-            else if (state[3] == 'B') firstPot += 1;
+            else if (state[2] == 'B') firstPot += 1;
 
             if (firstCard > secondCard) return secondPot;
             else return -firstPot;
@@ -63,7 +67,10 @@ namespace KuhnPoker
             string arg = EventDict.GetArg(parent.State,count);
             if (arg == "N")//something went wrong, could not be added
             {
-                Console.WriteLine("This {0} node can not have additional children",parent.ToString());
+                //Console.WriteLine("This {0} node can not have additional children",parent.ToString());
+                if(parent.Children.Count==0)
+                Console.WriteLine("Terminal node: {0} Payout: {1}",parent.ToString(),Payout1(parent));
+
                 return false;
             }
             if (arg == "J" || arg == "Q" || arg == "K")
