@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuildTree.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="EventDict.cs" />
     <Compile Include="KuhnNode.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="Program.cs" />

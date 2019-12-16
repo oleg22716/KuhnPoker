@@ -20,13 +20,16 @@ namespace KuhnPoker
         }
         static void Main(string[] args)
         {
-            KuhnNode node = new KuhnNode(null);
-            Print(node.ToString());
-            Print(node.GetChild(0).ToString());
-            Print(node.GetChild(0).GetChild(0).ToString());
-            Print(node.GetChild(0).GetChild(0).GetChild(0).ToString());
-         
-            
+            //KuhnNode node = new KuhnNode(null);
+            //Print(node.ToString());
+            //Print(node.GetChild(0).ToString());
+            //Print(node.GetChild(0).GetChild(0).ToString());
+            //Print(node.GetChild(0).GetChild(0).GetChild(0).ToString());
+            //Event @event = new Event(Event.EventType.Chance, "c1");
+            //Print(@event.ToString());
+            Tree tree = new Tree();
+            //tree.Build();
+
             Delay();
         }
     }

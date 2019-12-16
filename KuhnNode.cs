@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KuhnPoker
 {
-    internal class KuhnNode : Node
+    internal class KuhnNode
     {
         #region Types
         internal enum Type { Chance1, Chance2, Terminal, Player1, Player2, NotAssigned }
@@ -14,6 +14,7 @@ namespace KuhnPoker
         #region Fields
         internal Type type;
         string history;
+        string state;
         private char[] argHistory;
 
         //protected KuhnNode[] children;
@@ -29,6 +30,12 @@ namespace KuhnPoker
         #endregion
 
         #region Constructors
+        internal KuhnNode(KuhnNode parent,char arg) {
+            this.parent = parent;
+            this.History = "Setter calls SetHistory() regardless";
+            this.type = GetMyType();
+
+        }
         internal KuhnNode(KuhnNode parent)
         {
             this.parent = parent;
@@ -40,9 +47,10 @@ namespace KuhnPoker
             //this.ArgHistory[number] = GetArg();
 
             children = new KuhnNode[number];
+            char arg = '2';
             for (int i = 0; i < number; i++)
             {
-                children[i] = new KuhnNode(this);
+                children[i] = new KuhnNode(this,arg);
             }
 
 
@@ -52,6 +60,13 @@ namespace KuhnPoker
 
         #endregion
         #region Methods
+        private string PassArgs(int leafNumber) {
+            string state1 = state;
+
+
+            return state1;
+
+        }
         private void SetHistoryOld()
         {
             string history;
