@@ -47,14 +47,6 @@ namespace KuhnPoker
         {
             Children.Add(child);
         }
-        private void Add()
-        {
-            int count = Children.Count;//
-            string history = this.History;
-            string state = this.State;
-            Node node = new Node(this);
-            Children.Add(node);
-        }
 
         public override string ToString()
         {
