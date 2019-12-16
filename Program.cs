@@ -22,8 +22,11 @@ namespace KuhnPoker
         {
             KuhnNode node = new KuhnNode(null);
             Print(node.ToString());
-            Print(node.GetChild(0).GetChild(0).GetChild(1).ToString());
-
+            Print(node.GetChild(0).ToString());
+            Print(node.GetChild(0).GetChild(0).ToString());
+            Print(node.GetChild(0).GetChild(0).GetChild(0).ToString());
+         
+            
             Delay();
         }
     }
